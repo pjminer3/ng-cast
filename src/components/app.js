@@ -9,7 +9,7 @@ angular.module('video-player')
     };
     
     this.searchResults = (query) => {
-      youTube.getYouTube(query, this.resetVideos);
+      youTube.search(query, this.resetVideos);
     };
     
     this.resetVideos = (vidData) => {

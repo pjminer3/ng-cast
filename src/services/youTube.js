@@ -2,7 +2,7 @@ angular.module('video-player')
 .service('youTube', function($http) {
   // TODO
   
-  this.getYouTube = function(options, callback) {
+  this.search = function(options, callback) {
     console.log('this was called');
     return $http({
       method: 'GET',

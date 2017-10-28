@@ -1,7 +1,7 @@
 angular.module('video-player')
 .component('videoListEntry', {
   bindings: {
-    item: '<',
+    video: '<',
     $index: '<',
     onClick: '<'
   },
@@ -10,6 +10,7 @@ angular.module('video-player')
     this.vidUrl = (video) => {
       return video.snippet.thumbnails.default.url;
     };
+    
   },
   templateUrl: 'src/templates/videoListEntry.html'
 });

@@ -2,14 +2,15 @@ angular.module('video-player')
 
 .component('search', {
   bindings: {
-    searchResults: '<'
+    searchResults: '<',
+    resetVideos: '<'
   },
-  controller: function() {
+  controller: function(youTube) {
     
     this.userInput = '';
     
     this.launchSearch = function(input) {
-      this.searchResults(this.userInput);
+      youTube.search(this.userInput, this.resetVideos);
       this.userInput = '';
     };
     
